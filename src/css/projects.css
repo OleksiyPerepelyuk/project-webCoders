@@ -21,12 +21,12 @@
   margin-bottom: 32px;
 }
 .swiper-slide.active {
-  display: block; /* Тільки активний слайд видимий */
+  display: block;
 }
 .project-arrow.disabled,
 .next-arrow.disabled {
-  opacity: 0.5; /* Зменшена прозорість для деактивованих кнопок */
-  pointer-events: none; /* Запобігає кліку на кнопки */
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .project-arrow,
@@ -82,9 +82,35 @@
   width: 311px;
   height: 195px;
 }
+.button-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.project-icon {
+  stroke: #fafafa;
+  fill: none;
+}
+.project-arrow {
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  color: #fafafa;
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+}
+.project-arrow.disabled .project-icon {
+  stroke: #3b3b3b;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
+  }
+  .swiper-slide {
+    margin-bottom: 64px;
   }
   .project-item {
     padding: 64px;
@@ -100,12 +126,17 @@
   .project-picture {
     padding: 120px 45px;
   }
+  .project-arrow {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+  .project-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 @media screen and (min-width: 1440px) {
-  /* .swiper-slide {
-    width: 1376px;
-    height: 625px;
-  } */
   .project-item {
     width: 688px;
   }
