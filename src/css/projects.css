@@ -17,7 +17,23 @@
   list-style-type: none;
   background-color: #fafafa;
   border-radius: 24px;
+  display: none;
+  margin-bottom: 32px;
 }
+.swiper-slide.active {
+  display: block; /* Тільки активний слайд видимий */
+}
+.project-arrow.disabled,
+.next-arrow.disabled {
+  opacity: 0.5; /* Зменшена прозорість для деактивованих кнопок */
+  pointer-events: none; /* Запобігає кліку на кнопки */
+}
+
+.project-arrow,
+.next-arrow {
+  transition: opacity 0.3s ease;
+}
+
 .project-item {
   padding: 32px;
 }
@@ -73,6 +89,9 @@
   .project-item {
     padding: 64px;
   }
+  .project-tags-list {
+    margin-bottom: 164px;
+  }
   .project-desc {
     font-size: 44px;
     line-height: 1;
@@ -83,12 +102,15 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .swiper-slide {
+  /* .swiper-slide {
     width: 1376px;
     height: 625px;
-  }
+  } */
   .project-item {
     width: 688px;
+  }
+  .project-tags-list {
+    margin-bottom: 223px;
   }
   .project-btn:hover {
     background-color: #e0373f;
@@ -97,6 +119,7 @@
   .project-wrap {
     display: flex;
     box-sizing: border-box;
+    height: 625px;
   }
   .project-picture {
     border-radius: 0 24px 24px 0;
