@@ -94,15 +94,17 @@
 }
 .project-arrow {
   background-color: transparent;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.5);
   color: #fafafa;
   border-radius: 60px;
   padding: 14px;
   width: 52px;
   height: 52px;
 }
+
 .project-arrow.disabled .project-icon {
   stroke: #3b3b3b;
+  color: #3b3b3b;
 }
 
 @media screen and (min-width: 768px) {
