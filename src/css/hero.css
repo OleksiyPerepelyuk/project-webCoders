@@ -5,7 +5,7 @@
   margin-inline: auto;
   gap: 212px;
   padding: 281px 16px 32px;
-  background-image: image-set(url('../img/hero/mobile.webp') 1x, url('../img/hero/mobile2x.webp') 2x);
+  background-image: image-set(url('../img/hero/mobile.png') 1x, url('../img/hero/mobile2x.png') 2x);
   background-size: cover;
   background-position: center;
   min-width: 320px;
@@ -60,7 +60,7 @@
     width: 100%;
     padding: 300px 32px 32px;
     gap: 212px;
-    background-image: image-set(url('../img/hero/tablet.webp') 1x, url('../img/hero/tablet2x.webp') 2x);
+    background-image: image-set(url('../img/hero/tablet.png') 1x, url('../img/hero/tablet2x.png') 2x);
   }
 
   .hero-title {
@@ -96,7 +96,7 @@
     width: 100%;
     padding: 300px 32px 32px 178px;
     gap: 243px;
-    background-image: image-set(url('../img/hero/laptop.webp') 1x,
-        url('../img/hero/laptop2x.webp') 2x);
+    background-image: image-set(url('../img/hero/laptop.png') 1x,
+        url('../img/hero/laptop2x.png') 2x);
   }
 }
