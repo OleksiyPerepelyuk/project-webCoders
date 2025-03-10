@@ -9,19 +9,21 @@
   padding-left: 16px;
   min-width: 320px;
   align-items: start;
-  background-color: aqua;
-  /* position: absolute;
+  position: absolute;
+  background-color: transparent;
   top: 0;
   left: 0;
-  width: 100%;
-  background: transparent;
-  z-index: 10; */
+
 }
 
 
 .header-navigation {
   display: none;
 
+}
+
+.mobile-menu {
+  display: none;
 }
 
 html {
@@ -35,7 +37,7 @@ html {
 }
 
 .span-text {
-  color: black;
+  color: #fafafa;
 
 }
 
@@ -52,7 +54,7 @@ html {
 }
 
 .icon {
-  stroke: #0c0c0c;
+  stroke: #fafafa;
 }
 
 
@@ -97,7 +99,12 @@ html {
   .menu-btn {
     border: none;
     background: none;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
     text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
 
   }
 
