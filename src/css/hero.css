@@ -1,0 +1,102 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-inline: auto;
+  gap: 212px;
+  padding: 281px 16px 32px;
+  background-image: image-set(url('../img/hero/mobile.webp') 1x, url('../img/hero/mobile2x.webp') 2x);
+  background-size: cover;
+  background-position: center;
+  min-width: 320px;
+  max-width: 100%;
+}
+
+.hero-title {
+  color: #fafafa;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -1.5px;
+
+}
+
+.hero-list {
+  display: flex;
+  gap: 4px;
+
+}
+
+.hero-link {
+  width: 37px;
+  height: 37px;
+  padding: 10px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  color: #fafafa;
+}
+
+
+.mail {
+  width: 178px;
+  height: 37px;
+  padding: 10px 12px;
+  color: #fafafa;
+}
+
+.mail:hover {
+  border: 1px solid #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+
+  .hero {
+    width: 100%;
+    padding: 300px 32px 32px;
+    gap: 212px;
+    background-image: image-set(url('../img/hero/tablet.webp') 1x, url('../img/hero/tablet2x.webp') 2x);
+  }
+
+  .hero-title {
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: -2.7px;
+  }
+
+  .hero-list {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .hero-link {
+    width: 55px;
+    height: 55px;
+    padding: 18px 16px;
+    border-radius: 60px;
+    font-size: 16px;
+
+  }
+
+  .mail {
+    width: 223px;
+    height: 55px;
+    padding: 18px 24px;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    width: 100%;
+    padding: 300px 32px 32px 178px;
+    gap: 243px;
+    background-image: image-set(url('../img/hero/laptop.webp') 1x,
+        url('../img/hero/laptop2x.webp') 2x);
+  }
+}
