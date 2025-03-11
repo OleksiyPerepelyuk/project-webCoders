@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/project-webCoders/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-webCoders/assets/vendor-C8OOIaQm.js">
     <link rel="stylesheet" crossorigin href="/project-webCoders/assets/vendor-C6XH7XCx.css">
-    <link rel="stylesheet" crossorigin href="/project-webCoders/assets/index-DgYjR9Gy.css">
+    <link rel="stylesheet" crossorigin href="/project-webCoders/assets/index-D-LDsoPX.css">
   </head>
   <body>
     <header class="header">
@@ -442,7 +442,80 @@
 
     </main>
 
-    
+    <section id="work-together">
+  <div class="container w-t-container">
+    <div class="img-and-title">
+      <img
+        srcset="../img/header/Jefferson1x.webp 1x, /../Jefferson2x.webp"
+        alt="Jefferson Logo"
+        class="w-t-title-img"
+      />
+      <h2 class="w-t-title">
+        Let’s <span class="w-t-title-red"> work</span><br />
+        <span class="w-t-title-sub">together</span>
+      </h2>
+    </div>
+
+    <form
+      id="work-together-form"
+      action="https://portfolio-js.b.goit.study/api/requests"
+      method="POST"
+    >
+      <div class="input-bnt-group">
+        <div class="input-group">
+          <div class="i-g-email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="clients@gmail.com"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              required
+              autocomplete="off"
+              class="i-g-input"
+            />
+            <div id="email-message"></div>
+          </div>
+
+          <input
+            type="text"
+            id="comment"
+            name="comment"
+            placeholder="comments"
+            autocomplete="off"
+            class="i-g-input"
+          />
+        </div>
+
+        <button class="send-btn" id="send-btn" type="submit">Send</button>
+      </div>
+    </form>
+
+    <div class="contact-info">
+      <a href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+      <a href="tel:+380111111111">+380 11 1111 11 11</a>
+    </div>
+  </div>
+
+  <div id="w-t-modal" class="w-t-modal" style="display: none">
+    <div class="w-t-modal-content">
+      <h3 class="w-t-modal-title">
+        Thank you for your interest in cooperation!
+      </h3>
+      <p class="w-t-modal-text">
+        The manager will contact you shortly to discuss further details and
+        opportunities for cooperation. Please stay in touch.
+      </p>
+      <button class="w-t-close-btn" id="w-t-close-btn">
+        <svg class="w-t-close-btn-icon">
+          <use href="../img/icons.svg#icon-x"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="w-t-modal-backdrop"></div>
+  </div>
+</section>
+
 
   </body>
 </html>
