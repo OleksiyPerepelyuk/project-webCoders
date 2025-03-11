@@ -1,0 +1,96 @@
+.covers {
+    padding: 45px 0;
+}
+
+.marquee {
+    background: url('/img/covers/elements_vectors.png') no-repeat center/cover;
+    background-color: #111;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;    
+}
+.marquee-rect{
+    transform: rotate(16deg);
+    gap: 20px;
+}
+.marqueeinner {
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px; 
+    animation: marqueeScroll 5s linear infinite;
+}
+
+.marqueeinner:first-child,
+.marqueeinner:last-child {
+    margin-left: 20%; 
+}
+
+.marqueeline {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    white-space: nowrap;
+}
+
+.marqueeline img {
+    max-width: 282px;  
+    max-height: 162px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.marqueeline img:hover,
+.marqueeline img:focus {
+    transform: scale(1.1);
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@media screen and (max-width: 767px) {
+    .marqueeinner {
+        animation-duration: 22s;
+        margin-bottom: 15px;
+    }
+
+    .marqueeline img {
+        max-width: 282px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .marqueeinner {
+        animation-duration: 18s; 
+        margin-bottom: 20px;
+    }
+
+    .marqueeline img {
+        max-width: 544px;  
+        max-height: 314px;  
+    }
+
+    .marqueeline {
+        margin: 0 20px; 
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .marqueeinner {
+        animation-duration: 16s; 
+    }
+}
