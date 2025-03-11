@@ -4,9 +4,10 @@
 .reviews {
   max-width: 1440px;
   margin: 0 auto;
-  background: #111;
+  background-color: #1c1d20;
   color: #fff;
-  padding: 32px 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 #review {
@@ -69,8 +70,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: inherit;
-  color: rgba(250, 250, 250, 1);
+  background-color: transparent;
+  color: #fafafa;
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 60px;
   width: 52px;
@@ -82,7 +83,9 @@
   border-color: #e0373f;
 }
 
-.project-icon {
+.reviews-icon {
+  max-width: 24px;
+  max-height: 24px;
   fill: none;
   stroke: #fafafa;
 }
@@ -127,12 +130,13 @@
   }
 
   .reviews {
-    padding: 48px 32px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
-  .project-icon {
-    width: 32px;
-    height: 32px;
+  .reviews-icon {
+    max-width: 32px;
+    max-height: 32px;
   }
 }
 
