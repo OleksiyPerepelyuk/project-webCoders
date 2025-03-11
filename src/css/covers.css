@@ -1,10 +1,10 @@
 .covers {
+    background-color: #1C1D20;
     padding: 32px 0;
 }
 
 .marquee {
     background: url('/img/covers/elements_vectors.png') no-repeat center/cover;
-    background-color: #111;
     width: 100%;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     display: flex;
     list-style: none;
     margin-bottom: 20px; 
-    animation: marqueeScroll 5s linear infinite;
+    animation: marqueeScroll 5s linear infinite alternate;
 }
 
 .marqueeinner:first-child,
@@ -51,19 +51,30 @@
 .marqueeline img:focus {
     transform: scale(1.1);
 }
-
-@keyframes marqueeScroll {
+.marqueeinner:nth-child(odd) {
+    animation-name: marqueeLeft;
+}
+.marqueeinner:nth-child(even) {
+    animation-name: marqueeRight;
+}
+@keyframes marqueeLeft {
     from {
-        transform: translateX(0);
+        transform: translateX(30%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes marqueeRight {
+    from {
+        transform: translateX(-30%);
+    }
+    to {
+        transform: translateX(20%);
     }
 }
 @media screen and (max-width: 767px) {
-    .covers {
-        padding: 48px 0;
-    }
     .marqueeinner {
         animation-duration: 22s;
         margin-bottom: 15px;
@@ -75,7 +86,9 @@
 }
 
 @media screen and (min-width: 768px) {
-
+    .covers {
+        padding: 48px 0;
+    }
     .marqueeinner {
         animation-duration: 18s; 
         margin-bottom: 20px;

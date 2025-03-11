@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const coversSection = document.querySelector(".covers");
     const marquee = document.querySelector(".marquee");
-    const marqueeInner = document.querySelectorAll(".marqueeinner");
+
+    if (!coversSection || !marquee) return; 
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -15,4 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             marquee.classList.remove("marquee-active");
         }
     }
+    checkAnimation();
+    
+    window.addEventListener("scroll", checkAnimation);
 });
+
