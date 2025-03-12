@@ -33,7 +33,7 @@ function renderReviews(reviews) {
   const markup = reviews
     .map(
       review => `
-    <li class="swiper-slide reviews-swiper" id="review">
+    <li class="swiper-slide" id="review">
       <img class="reviewer-image" src="${review.avatar_url}" alt="user photo" width="48" height="48"/>
       <h3 class="reviewer-name">${review.author}</h3>
       <p class="review-text">${review.review}</p>
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reviews = await getReviews();
   renderReviews(reviews);
 
-  const swiper = new Swiper('.reviews-swiper', {
+  const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 16,
     breakpoints: {
