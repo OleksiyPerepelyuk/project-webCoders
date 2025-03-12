@@ -1,4 +1,4 @@
-.modal-mobile-menu {
+.mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.modal-mobile-menu.is-open {
+.mobile-menu.is-open {
   opacity: 1;
   pointer-events: auto;
 }
