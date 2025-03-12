@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reviews = await getReviews();
   renderReviews(reviews);
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.reviews-swiper', {
     slidesPerView: 1,
     spaceBetween: 16,
     breakpoints: {
