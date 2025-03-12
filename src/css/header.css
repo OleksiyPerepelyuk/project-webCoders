@@ -88,6 +88,8 @@ html {
 
   }
 
+
+
   .header-burger {
     display: none;
   }
@@ -116,6 +118,9 @@ html {
     top: 0;
     left: 50%;
     translate: -50% 70%;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
 
 
   }
