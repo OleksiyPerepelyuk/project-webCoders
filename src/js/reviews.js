@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
 async function getReviews() {
   try {
     const response = await fetch(
