@@ -110,10 +110,10 @@
       url('../img/hero/desktop_1x.png') 1x,
       url('../img/hero/desktop_2x.png') 2x
     );
-    background-position: left;
+    /* background-position: left;
     background-repeat: no-repeat;
     background-size: 728px 900px;
-    background-color: #1c1d20;
+    background-color: #1c1d20; */
   }
 
   .hero-title {
