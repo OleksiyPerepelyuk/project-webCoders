@@ -35,7 +35,7 @@
   overflow: hidden;
 }
 
-.swiper-slide {
+.reviews-swiper .swiper-slide {
   background: #222;
   padding: 20px;
   border-radius: 8px;
