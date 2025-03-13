@@ -5,17 +5,14 @@
   margin-inline: auto;
   gap: 212px;
   padding: 281px 16px 32px;
-  background-image: image-set(
-    url('../img/hero/mob_1x.png') 1x,
-    url('../img/hero/mob_2x.png') 2x
-  );
+  background-image: image-set(url('../img/hero/mob_1x.png') 1x,
+      url('../img/hero/mob_2x.png') 2x);
   background-size: cover;
   background-position: center;
   background-position: left;
   background-repeat: no-repeat;
   background-color: #1c1d20;
   min-width: 320px;
-  max-width: 100%;
 }
 
 .hero-title {
@@ -67,10 +64,8 @@
     align-items: flex-start;
     padding: 300px 32px 32px;
     gap: 212px;
-    background-image: image-set(
-      url('../img/hero/laptop_1x.png') 1x,
-      url('../img/hero/laptop_2x.png') 2x
-    );
+    background-image: image-set(url('../img/hero/laptop_1x.png') 1x,
+        url('../img/hero/laptop_2x.png') 2x);
     /* background-size: 768px 1024px;
     background-color: #1c1d20; */
   }
@@ -106,10 +101,8 @@
     width: 100%;
     padding: 300px 32px 32px 178px;
     gap: 243px;
-    background-image: image-set(
-      url('../img/hero/desktop_1x.png') 1x,
-      url('../img/hero/desktop_2x.png') 2x
-    );
+    background-image: image-set(url('../img/hero/desktop_1x.png') 1x,
+        url('../img/hero/desktop_2x.png') 2x);
     background-position: left;
     background-repeat: no-repeat;
     background-size: 728px 900px;
