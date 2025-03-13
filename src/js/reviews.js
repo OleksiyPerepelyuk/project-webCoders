@@ -5,11 +5,17 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 async function getReviews() {
   try {
+    console.log('Fetching reviews...');
     const response = await axios.get(
       'https://portfolio-js.b.goit.study/api/reviews'
     );
+    console.log('API Response:', response.data);
+    if (!response.data || response.data.length === 0) {
+      throw new Error('No reviews found');
+    }
     return response.data;
   } catch (error) {
+    console.error('Error fetching reviews:', error.message);
     iziToast.error({
       title: 'Error',
       message: 'Sorry, something went wrong with reviews.',
@@ -19,9 +25,14 @@ async function getReviews() {
 }
 function renderReviews(reviews) {
   const reviewsList = document.getElementById('reviews-list');
+  if (!reviewsList) {
+    console.error('Element #reviews-list not found in DOM!');
+    return;
+  }
   reviewsList.innerHTML = '';
   if (!reviews || reviews.length === 0) {
     reviewsList.innerHTML = '<p class="error">Not found</p>';
+    console.log('No reviews to display.');
     return;
   }
   const markup = reviews
@@ -36,16 +47,22 @@ function renderReviews(reviews) {
     )
     .join('');
   reviewsList.insertAdjacentHTML('beforeend', markup);
+  console.log('Inserted reviews into DOM:', markup);
 }
 function updateButtonState(swiper) {
   const prevButton = document.getElementById('prev');
   const nextButton = document.getElementById('next');
+  if (!prevButton || !nextButton) {
+    console.error('Swiper navigation buttons not found!');
+    return;
+  }
   prevButton.classList.toggle('disabled', swiper.isBeginning);
   nextButton.classList.toggle('disabled', swiper.isEnd);
   prevButton.disabled = swiper.isBeginning;
   nextButton.disabled = swiper.isEnd;
 }
 document.addEventListener('DOMContentLoaded', async () => {
+  console.log('DOM fully loaded!');
   const reviews = await getReviews();
   renderReviews(reviews);
   const swiper = new Swiper('.reviews-swiper', {
@@ -76,24 +93,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       },
     },
   });
-  document.getElementById('prev').addEventListener('keydown', function (event) {
-    if (
-      event.key === 'ArrowLeft' ||
-      event.key === 'Enter' ||
-      event.key === ' '
-    ) {
-      event.preventDefault();
-      swiper.slidePrev();
-    }
-  });
-  document.getElementById('next').addEventListener('keydown', function (event) {
-    if (
-      event.key === 'ArrowRight' ||
-      event.key === 'Enter' ||
-      event.key === ' '
-    ) {
-      event.preventDefault();
-      swiper.slideNext();
-    }
-  });
+  console.log('Swiper initialized:', swiper);
+  document
+    .getElementById('prev')
+    ?.addEventListener('keydown', function (event) {
+      if (['ArrowLeft', 'Enter', ' '].includes(event.key)) {
+        event.preventDefault();
+        swiper.slidePrev();
+      }
+    });
+  document
+    .getElementById('next')
+    ?.addEventListener('keydown', function (event) {
+      if (['ArrowRight', 'Enter', ' '].includes(event.key)) {
+        event.preventDefault();
+        swiper.slideNext();
+      }
+    });
 });
