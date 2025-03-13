@@ -65,49 +65,48 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM fully loaded!');
   const reviews = await getReviews();
   renderReviews(reviews);
-  const swiper = new Swiper('.reviews-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 16,
-    breakpoints: {
-      375: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1440: { slidesPerView: 4 },
-    },
-    navigation: {
-      nextEl: '#next',
-      prevEl: '#prev',
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-    mousewheel: true,
-    touchRatio: 1,
-    loop: false,
-    on: {
-      init: function () {
-        updateButtonState(this);
+  setTimeout(() => {
+    const swiper = new Swiper('.reviews-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        375: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1440: { slidesPerView: 4 },
       },
-      slideChange: function () {
-        updateButtonState(this);
+      navigation: {
+        nextEl: '#next',
+        prevEl: '#prev',
       },
-    },
-  });
-  console.log('Swiper initialized:', swiper);
-  document
-    .getElementById('prev')
-    ?.addEventListener('keydown', function (event) {
-      if (['ArrowLeft', 'Enter', ' '].includes(event.key)) {
-        event.preventDefault();
-        swiper.slidePrev();
-      }
+      keyboard: { enabled: true, onlyInViewport: true },
+      mousewheel: true,
+      touchRatio: 1,
+      loop: false,
+      on: {
+        init: function () {
+          updateButtonState(this);
+        },
+        slideChange: function () {
+          updateButtonState(this);
+        },
+      },
     });
-  document
-    .getElementById('next')
-    ?.addEventListener('keydown', function (event) {
-      if (['ArrowRight', 'Enter', ' '].includes(event.key)) {
-        event.preventDefault();
-        swiper.slideNext();
-      }
-    });
+    console.log('Swiper re-initialized:', swiper);
+    document
+      .getElementById('prev')
+      ?.addEventListener('keydown', function (event) {
+        if (['ArrowLeft', 'Enter', ' '].includes(event.key)) {
+          event.preventDefault();
+          swiper.slidePrev();
+        }
+      });
+    document
+      .getElementById('next')
+      ?.addEventListener('keydown', function (event) {
+        if (['ArrowRight', 'Enter', ' '].includes(event.key)) {
+          event.preventDefault();
+          swiper.slideNext();
+        }
+      });
+  }, 100);
 });
