@@ -1,17 +1,14 @@
+import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-
 async function getReviews() {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       'https://portfolio-js.b.goit.study/api/reviews'
     );
-    if (!response.ok) {
-      throw new Error('Failed to fetch reviews');
-    }
-    return await response.json();
+    return response.data;
   } catch (error) {
     iziToast.error({
       title: 'Error',
@@ -20,20 +17,17 @@ async function getReviews() {
     return [];
   }
 }
-
 function renderReviews(reviews) {
   const reviewsList = document.getElementById('reviews-list');
   reviewsList.innerHTML = '';
-
   if (!reviews || reviews.length === 0) {
     reviewsList.innerHTML = '<p class="error">Not found</p>';
     return;
   }
-
   const markup = reviews
     .map(
       review => `
-    <li class="swiper-slide" id="review">
+    <li class="swiper-slide swiper-slide-reviews" id="review">
       <img class="reviewer-image" src="${review.avatar_url}" alt="user photo" width="48" height="48"/>
       <h3 class="reviewer-name">${review.author}</h3>
       <p class="review-text">${review.review}</p>
@@ -41,22 +35,20 @@ function renderReviews(reviews) {
   `
     )
     .join('');
-
   reviewsList.insertAdjacentHTML('beforeend', markup);
 }
-
 function updateButtonState(swiper) {
-  document
-    .getElementById('prev')
-    .classList.toggle('disabled', swiper.isBeginning);
-  document.getElementById('next').classList.toggle('disabled', swiper.isEnd);
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  prevButton.classList.toggle('disabled', swiper.isBeginning);
+  nextButton.classList.toggle('disabled', swiper.isEnd);
+  prevButton.disabled = swiper.isBeginning;
+  nextButton.disabled = swiper.isEnd;
 }
-
 document.addEventListener('DOMContentLoaded', async () => {
   const reviews = await getReviews();
   renderReviews(reviews);
-
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.reviews-swiper', {
     slidesPerView: 1,
     spaceBetween: 16,
     breakpoints: {
@@ -84,7 +76,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       },
     },
   });
-
   document.getElementById('prev').addEventListener('keydown', function (event) {
     if (
       event.key === 'ArrowLeft' ||
@@ -95,7 +86,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       swiper.slidePrev();
     }
   });
-
   document.getElementById('next').addEventListener('keydown', function (event) {
     if (
       event.key === 'ArrowRight' ||

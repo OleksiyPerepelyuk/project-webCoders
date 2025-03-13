@@ -1,0 +1,84 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  margin: 0 auto;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 302px;
+  padding-bottom: 64px;
+  max-height: 812px;
+  max-width: 412px;
+  background-image: image-set(url('/img/glass-effect.jpg'));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mobile-menu-close-btn {
+  position: absolute;
+  right: 16px;
+  top: 32px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  border-radius: none;
+}
+.mobile-menu-btn-icon {
+  stroke: #fafafa;
+  fill: none;
+}
+.mobile-nav {
+  margin: 0 auto auto auto;
+}
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto 218px auto;
+  text-align: center;
+}
+.mobile-menu-link {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  line-height: 1.29;
+  text-align: center;
+  color: #fafafa;
+}
+.order-project {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  border-radius: 60px;
+  border: none;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ed3b44;
+  margin: 0 auto;
+}
+
+.order-project:hover,
+.order-project:focus {
+  background-color: #e0373f;
+}
