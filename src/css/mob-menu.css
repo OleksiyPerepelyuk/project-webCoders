@@ -6,11 +6,7 @@
   width: 100vw;
   z-index: 10;
   margin: 0;
-  transition: transform 0.3s ease-in-out;
-  background-image: image-set(url('/img/glass-effect.jpg'));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
   opacity: 0;
   pointer-events: none;
   padding: 32px 16px 64px;
@@ -24,6 +20,12 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
+  animation: modal-fall-in 0.5s ease-in forwards;
+  transition: transform 0.3s ease-in-out;
+  background-image: image-set(url('/img/glass-effect.jpg'));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .mobile-menu-container {
@@ -66,9 +68,7 @@
   /* margin: 0 auto 289px auto; */
   text-align: center;
   align-items: center;
-
 }
-
 
 .mobile-menu-link {
   font-family: 'Inter Tight', sans-serif;
@@ -96,7 +96,7 @@
   justify-content: center;
   background-color: #ed3b44;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
 }
 
 .order-project:hover,
