@@ -12,6 +12,7 @@
   width: 343px;
   min-height: 302px;
   padding: 32px 24px;
+  margin-bottom: 32px;
 }
 .reviews-header {
   font-family: 'Inter Tight', sans-serif;
@@ -28,7 +29,7 @@
   width: 100%;
   overflow: hidden;
 }
-
+/* 
 .swiper {
   width: 100%;
   overflow: hidden;
@@ -41,7 +42,7 @@
 .swiper-slide {
   flex-shrink: 0;
   width: auto;
-}
+} */
 
 .swiper-slide-reviews {
   background: #222;
