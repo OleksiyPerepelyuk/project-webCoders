@@ -39,7 +39,7 @@ html {
 
 }
 
-.order-btn {
+.order-button {
   display: none;
 
 }
@@ -70,7 +70,7 @@ html {
 
   }
 
-  .order-btn {
+  .order-button {
     border-radius: 60px;
     padding: 18px 24px;
     background: #ed3b44;
