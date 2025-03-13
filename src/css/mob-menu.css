@@ -22,7 +22,7 @@
   transform: translateX(0);
   animation: modal-fall-in 0.5s ease-in forwards;
   transition: transform 0.3s ease-in-out;
-  background-image: image-set(url('/img/glass-effect.jpg'));
+  background-image: url('/img/glass-effect.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
