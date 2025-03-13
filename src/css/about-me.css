@@ -1,0 +1,266 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.about-me-section{
+    background-color: #1c1d20;
+    padding-top: 32px;
+}
+
+.about-me-wrapper{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.text-wrapper {
+    height: auto;
+    border-radius: 24px;
+    width: 704px;
+    background-color: #242527;
+    padding: 32px
+}
+.about-me-text{
+    
+    padding: 32px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.05263;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+.grey-span{
+    color: rgba(250, 250, 250, 0.4);
+}
+.red-span{
+    color: #ed3b44;
+}
+.pic-wrapper{
+    border-radius: 24px;
+}
+.pic-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.about-me-description {
+    margin-top: 32px;
+}
+.about-me-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.accordion-btn {
+    float: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.accordion-content {
+    margin-top: 8px;
+    padding: 16px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-me-list{
+    margin-top: 32px;
+}
+.about-me-item{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    padding: 10px 0 20px 0;
+
+   
+}
+
+
+.about-title{
+    margin-top: 32px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-btn{
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    background-color: #1c1d20;
+
+
+}
+.about-me-svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #fafafa;
+
+}
+.about-me-item.is-active .about-me-svg {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    overflow: hidden;
+}
+.info-item {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+}
+
+.first-text{
+    /* margin-top: 32px; */
+    margin-bottom: 32px;
+}
+
+/* skills */
+
+.skills {
+    padding-right: 83px;
+    position: relative;
+}
+
+.skills-list {
+    margin-bottom: 96px;
+    display: flex;
+}
+
+.skills .skill-item {
+    color: #fafafa;
+    font-weight: 500;
+    line-height: 150%;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    height: 130px;
+    border: 1px solid rgba(250, 250, 250, 0.20);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.skills .skill-item.swiper-slide-active {
+    background-color:#ED3B44;
+    border: none;
+}
+
+.skills-button {
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    cursor: pointer;
+}
+
+.skill-icon {
+    fill: none;
+    stroke: #3B3B3B;
+
+}
+
+ @media screen and (min-width: 768px) {
+     .about-me-list {
+         margin-top: 64px;
+     }
+
+     .about-me-item {
+         padding: 10px 0 32px 0;
+     }
+
+     .about-btn {
+         width: 40px;
+         height: 40px;
+     }
+
+     .about-me-svg {
+         width: 20px;
+         height: 20px;
+     }
+
+     .text-wrapper {
+         width: 704px;
+         height: 700px;
+     }
+
+     .about-me-text {
+         padding: 64px;
+     }
+
+     .about-me-text {
+         font-size: 38px;
+         line-height: 40px;
+     }
+
+     .skills {
+         padding-right: 104px;
+     }
+
+     .skills .skill-item {
+        background-color: #1c1d20;
+         width: 200px;
+         height: 200px;
+         font-size: 20px;
+     }
+
+
+ }
+
+ @media screen and (min-width: 1440px) {
+     .about-me-list {
+         margin-top: 96px;
+     }
+
+     .accordion-content {
+         padding-left: 696px;
+         padding-right: 68px;
+     }
+
+     .info-item.is-active & {
+         margin-top: 8px;
+     }
+
+     .info-item {
+         display: grid;
+     }
+
+     .about-me-section {
+         padding-bottom: 48px;
+         padding-top: 48px;
+     }
+
+     .text-wrapper {
+         width: 680px;
+         height: 700px;
+     }
+
+     .skills {
+         padding-right: 144px;
+         padding-left: 32px;
+     }
+
+ }
