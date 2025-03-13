@@ -103,6 +103,9 @@
   margin-top: 20px;
 }
 .about-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: 100px;
@@ -136,8 +139,8 @@
 /* skills */
 
 .skills {
-  padding-right: 83px;
   position: relative;
+  padding-right: 83px;
 }
 
 .skills-list {
@@ -167,16 +170,17 @@
 
 .skills-button {
   background-color: transparent;
-  width: 28px;
-  height: 28px;
+  border: none;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
-  right: 16px;
+  right: 0px;
   cursor: pointer;
 }
 
 .skill-icon {
+  width: 28px;
+  height: 28px;
   fill: none;
   stroke: #3b3b3b;
 }
@@ -241,6 +245,11 @@
     width: 200px;
     height: 200px;
     font-size: 20px;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
