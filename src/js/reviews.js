@@ -1,16 +1,14 @@
-// import iziToast from 'izitoast';
-// import 'izitoast/dist/css/iziToast.min.css';
-// import Swiper from 'swiper';
-// import 'swiper/css';
+import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 async function getReviews() {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       'https://portfolio-js.b.goit.study/api/reviews'
     );
-    if (!response.ok) {
-      throw new Error('Failed to fetch reviews');
-    }
-    return await response.json();
+    return response.data;
   } catch (error) {
     iziToast.error({
       title: 'Error',
