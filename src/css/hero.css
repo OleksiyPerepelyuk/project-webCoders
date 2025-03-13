@@ -10,7 +10,7 @@
     url('../img/hero/mob_2x.png') 2x
   );
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   background-position: left;
   background-repeat: no-repeat;
   background-color: #1c1d20;

@@ -1,6 +1,6 @@
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
-const slides = document.querySelectorAll('.swiper-slide');
+const slides = document.querySelectorAll('.project-swiper-slide');
 let currentSlide = 0;
 let touchStartX = 0;
 let touchEndX = 0;
@@ -51,7 +51,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-const swiperWrapper = document.querySelector('.swiper-wrapper');
+const swiperWrapper = document.querySelector('.project-swiper-wrapper');
 
 swiperWrapper.addEventListener('touchstart', e => {
   touchStartX = e.touches[0].clientX;
