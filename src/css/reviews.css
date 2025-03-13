@@ -28,6 +28,21 @@
   width: 100%;
   overflow: hidden;
 }
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+}
+
 .swiper-slide-reviews {
   background: #222;
   padding: 20px;
